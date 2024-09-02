@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us - PLAYTNS</title>
+    <link rel="stylesheet" href="request.css">
+</head>
+<body>
+    <div class="request-wrapper">
+        <div class="request-box">
+            <h1>Join Our Team</h1>
+            <p class="subheading">We’re excited to hear from talented individuals who want to be part of our creative team at PLAYTNS.</p>
+            <form id="requestForm">
+                <div class="input-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send Request</button>
+                <p class="message">Back to <a href="index.html">Home</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('requestForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            // Perform form submission logic here (e.g., sending data via AJAX)
+
+            // Show success message or redirect
+            alert('Your request has been submitted successfully!');
+            window.location.href = 'index.html'; // Redirect to home page
+        });
+    </script>
+</body>
+</html>

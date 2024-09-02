@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - PLAYTNS</title>
+    <link rel="stylesheet" href="style-lgn.css">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-box">
+            <h1>Welcome Back</h1>
+            <p class="subheading">Please log in to your account</p>
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <button type="submit">Log In</button>
+                <p class="message">Don't have an account? <a href="register.html">Sign up</a></p>
+                <p class="message">Back to <a href="index.html">Home</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            
+            // Here you can add code to validate the form, send data via AJAX, etc.
+            
+            // Redirect to homepage after form submission
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
